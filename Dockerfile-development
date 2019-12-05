@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update
+RUN apt-get install -y gcc vim mono-mcs && \
+    rm -rf /var/lib/apt/lists/*
+WORKDIR /build
+CMD bash
