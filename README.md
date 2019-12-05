@@ -9,7 +9,7 @@ docker build -t docker_cpp -f Dockerfile-development .
 ```
 
 ## Run Docker Container Environment
-This docker will commmand will mound the current directory insside the /build directory
+This docker will commmand will mound the current directory insside the /build directory.  The reason to mount the directory is to keep the compiled binery in the host OS.
 
 ### On Windows
 ```
@@ -31,3 +31,10 @@ g++ helloworld.cpp
 ```
 ./a.out
 ```
+
+## Cleanup
+```
+exit
+```
+
+The a.out file will stay on your host OS after the container exits.
